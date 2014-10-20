@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Core.CQRS
 {
-    public interface IRepository<T> where T : AggregateRoot
+    public interface ISendCommands
     {
-        void Save(AggregateRoot aggregate, int expectedVersion);
-        T GetById(Guid id);
+        void Send<T>(T command) where T : Command;
     }
 }

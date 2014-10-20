@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.CQRS
+namespace Infrastructure.FakeBusClient
 {
-    public interface IHandle<T> where T : Command 
+    public class Class1
     {
-        void Handle(T commandToHandle);
     }
 }

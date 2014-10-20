@@ -7,7 +7,7 @@
     <ProjectGuid>{A8A7E179-29B4-4CAC-BC3C-8F6711805137}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Infrastructure.CQRS</RootNamespace>
+    <RootNamespace>Core.CQRS</RootNamespace>
     <AssemblyName>Infrastructure.CQRS</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -44,14 +44,21 @@
     <Compile Include="ConcurrencyConflictResolver.cs" />
     <Compile Include="Dto.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="Exceptions\AggregateNotFoundException.cs" />
+    <Compile Include="Exceptions\ConcurrencyException.cs" />
+    <Compile Include="Exceptions\IllegalStateException.cs" />
+    <Compile Include="IBus.cs" />
     <Compile Include="IConcurrencyConflictResolver.cs" />
     <Compile Include="IDomainEventPublisher.cs" />
     <Compile Include="IEvent.cs" />
+    <Compile Include="IEventStore.cs" />
     <Compile Include="IHandle.cs" />
+    <Compile Include="IPublishEvents.cs" />
+    <Compile Include="ISendCommands.cs" />
+    <Compile Include="ISubscribe.cs" />
     <Compile Include="IMessage.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

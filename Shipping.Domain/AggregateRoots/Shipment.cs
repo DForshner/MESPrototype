@@ -1,5 +1,5 @@
 ﻿using Core.CQRS;
-using Core.Domain.Exceptions;
+using Core.CQRS.Exceptions;
 using Shipping.Messages.Events;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Shipping.Domain.AggregateRoots
 {
-    internal class Shipment : AggregateRoot 
+    public class Shipment : AggregateRoot 
     {
         private readonly Guid _id;
         public ShipmentStatues _status;

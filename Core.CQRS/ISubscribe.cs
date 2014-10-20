@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Core.CQRS
 {
-    public interface IRepository<T> where T : AggregateRoot
+    public interface ISubscribe<T> where T : Event
     {
-        void Save(AggregateRoot aggregate, int expectedVersion);
-        T GetById(Guid id);
+        void Notify(T eventThatOccured);
     }
 }

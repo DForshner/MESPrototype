@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\ConcurrencyException.cs" />
+    <Compile Include="Exceptions\AggregateNotFoundException.cs" />
     <Compile Include="Exceptions\IllegalStateException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

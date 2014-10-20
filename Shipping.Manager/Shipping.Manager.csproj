@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{94262F39-F2C8-4B0D-9057-B61FC327DBD9}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{7C707699-FC92-4EBF-A70B-E07A6B95D264}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Shipping.Messages</RootNamespace>
-    <AssemblyName>Shipping.Messages</AssemblyName>
+    <RootNamespace>Shipping.Manager</RootNamespace>
+    <AssemblyName>Shipping.Manager</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -39,15 +41,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\CompleteShipment.cs" />
-    <Compile Include="Commands\CreateShipment.cs" />
-    <Compile Include="Events\InventoryShipped.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core.CQRS\Core.CQRS.csproj">
       <Project>{a8a7e179-29b4-4cac-bc3c-8f6711805137}</Project>
       <Name>Core.CQRS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.FakeBusClient\Infrastructure.FakeBusClient.csproj">
+      <Project>{15c00974-eea1-4b4c-8cd9-c5289b688402}</Project>
+      <Name>Infrastructure.FakeBusClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.FakePersistance\Infrastructure.FakePersistance.csproj">
+      <Project>{068ab24a-8402-4a61-8b2e-bf4854c680d9}</Project>
+      <Name>Infrastructure.FakePersistance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shipping.Domain\Shipping.Domain.csproj">
+      <Project>{4ea7c506-cd7f-4065-82a3-dca564b60045}</Project>
+      <Name>Shipping.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shipping.Messages\Shipping.Messages.csproj">
+      <Project>{94262f39-f2c8-4b0d-9057-b61fc327dbd9}</Project>
+      <Name>Shipping.Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

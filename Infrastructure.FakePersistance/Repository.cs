@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Core.CQRS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.CQRS
+namespace Infrastructure.FakePersistance
 {
     public class Repository<T> : IRepository<T> where T : AggregateRoot
     {

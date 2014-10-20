@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\CreateInventoryItem.cs" />
+    <Compile Include="Commands\RenameInventoryItem.cs" />
     <Compile Include="Events\InventoryItemCreated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
