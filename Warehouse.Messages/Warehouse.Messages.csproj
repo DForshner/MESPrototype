@@ -39,9 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\CreateInventoryItem.cs" />
+    <Compile Include="Commands\TransferInventory.cs" />
+    <Compile Include="Commands\CreateInventory.cs" />
+    <Compile Include="Commands\CreateLocation.cs" />
+    <Compile Include="Commands\CreateInventoryDefinition.cs" />
     <Compile Include="Commands\RenameInventoryItem.cs" />
-    <Compile Include="Events\InventoryItemCreated.cs" />
+    <Compile Include="Events\InventoryCreated.cs" />
+    <Compile Include="Events\LocationCreated.cs" />
+    <Compile Include="Events\InventoryDefinitionCreated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

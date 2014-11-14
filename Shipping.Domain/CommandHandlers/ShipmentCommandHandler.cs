@@ -1,11 +1,6 @@
 ﻿using Core.CQRS;
 using Shipping.Domain.AggregateRoots;
 using Shipping.Messages.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shipping.Domain.CommandHandlers
 {

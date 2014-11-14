@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5D771A78-73D3-4E3F-A57C-23CBAA327D94}</ProjectGuid>
+    <ProjectGuid>{DD50D15C-D150-4571-BC16-CED11006BA32}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Production.Simulation</RootNamespace>
-    <AssemblyName>Production.Simulation</AssemblyName>
+    <RootNamespace>Warehouse.Manager</RootNamespace>
+    <AssemblyName>Warehouse.Manager</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Production.Simulation.Program</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,9 +52,25 @@
       <Project>{a8a7e179-29b4-4cac-bc3c-8f6711805137}</Project>
       <Name>Core.CQRS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Core.Messages\Core.Messages.csproj">
+      <Project>{2fedb7df-829f-448f-bbac-73041acdcd5c}</Project>
+      <Name>Core.Messages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infrastructure.FakeBusClient\Infrastructure.FakeBusClient.csproj">
       <Project>{15c00974-eea1-4b4c-8cd9-c5289b688402}</Project>
       <Name>Infrastructure.FakeBusClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.FakePersistance\Infrastructure.FakePersistance.csproj">
+      <Project>{068ab24a-8402-4a61-8b2e-bf4854c680d9}</Project>
+      <Name>Infrastructure.FakePersistance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Domain\Warehouse.Domain.csproj">
+      <Project>{491f5bb6-5b20-4403-8fdf-e16a56298d64}</Project>
+      <Name>Warehouse.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Messages\Warehouse.Messages.csproj">
+      <Project>{5a161e0e-7764-4a4d-befb-ed10b7a54730}</Project>
+      <Name>Warehouse.Messages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

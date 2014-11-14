@@ -52,6 +52,10 @@
       <Project>{a8a7e179-29b4-4cac-bc3c-8f6711805137}</Project>
       <Name>Core.CQRS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Core.Messages\Core.Messages.csproj">
+      <Project>{2fedb7df-829f-448f-bbac-73041acdcd5c}</Project>
+      <Name>Core.Messages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infrastructure.FakeBusClient\Infrastructure.FakeBusClient.csproj">
       <Project>{15c00974-eea1-4b4c-8cd9-c5289b688402}</Project>
       <Name>Infrastructure.FakeBusClient</Name>

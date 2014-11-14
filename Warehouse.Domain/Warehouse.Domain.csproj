@@ -39,16 +39,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AggregateRoots\InventoryItem.cs" />
+    <Compile Include="AggregateRoots\InventoryDefinition.cs" />
+    <Compile Include="CommandHandlers\InventoryHandler.cs" />
+    <Compile Include="CommandHandlers\LocationCommandHandler.cs" />
+    <Compile Include="AggregateRoots\Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Infrastructure.CQRS\Core.CQRS.csproj">
+    <ProjectReference Include="..\Core.CQRS\Core.CQRS.csproj">
       <Project>{a8a7e179-29b4-4cac-bc3c-8f6711805137}</Project>
       <Name>Core.CQRS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Warehouse.Messages\Warehouse.Messages.csproj">
+      <Project>{5a161e0e-7764-4a4d-befb-ed10b7a54730}</Project>
+      <Name>Warehouse.Messages</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Domain\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.CQRS
 {
-    public interface IDomainEventPublisher
-    {
-        void Publish<T>(T eventToPublish) where T : IEvent;
-    }
+    //public interface IDomainEventPublisher : IPublishEvents
+    //{
+    //}
 }
