@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace Warehouse.Messages.Commands
 {
-    public class RenameInventoryItem : Command
+    public class RenameInventoryItem : Command, IVersioned
     {
         public readonly Guid InventoryItemId;
         public readonly string NewName;
-        public readonly int OriginalVersion;
+        public int Version {get; private set;}
 
         public RenameInventoryItem(Guid inventoryItemId, string newName, int originalVersion)
         {
             InventoryItemId = inventoryItemId;
             NewName = newName;
-            OriginalVersion = originalVersion;
+            Version = originalVersion;
         }
     }
 }

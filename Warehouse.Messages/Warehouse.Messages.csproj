@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Other.cs" />
+    <Compile Include="Commands\RemoveItemsFromInventory.cs" />
     <Compile Include="Commands\TransferInventory.cs" />
     <Compile Include="Commands\CreateInventory.cs" />
     <Compile Include="Commands\CreateLocation.cs" />
@@ -47,6 +49,7 @@
     <Compile Include="Events\InventoryCreated.cs" />
     <Compile Include="Events\LocationCreated.cs" />
     <Compile Include="Events\InventoryDefinitionCreated.cs" />
+    <Compile Include="Events\Other.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
