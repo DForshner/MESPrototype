@@ -1,7 +1,7 @@
 MESPrototype
 ============
 
-This is a toy MES/MOM that explores using DDD, CQRS, and event sourcing.
+A demo MES I'm using to explore using DDD, CQRS, Event Sourcing, and Functional Reactive Programming concepts.
 
 WebPortal Solution
 - Web portal to view and control system
