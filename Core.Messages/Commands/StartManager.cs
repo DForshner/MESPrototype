@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Web.Visitor
+namespace Core.Messages
 {
-    //public class RequestLogFilter : ActionFilterAttribute
-    //{
-    //}
+    public class StartManager
+    {
+
+    }
 }

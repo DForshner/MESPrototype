@@ -18,7 +18,7 @@ namespace Infrastructure.FakePersistance
             this._publisher = publisher;
         }
 
-        public void Save(Guid aggregateId, IEnumerable<Event> events, int expectedVersion)
+        public void SaveEvents(Guid aggregateId, IEnumerable<Event> events, int expectedVersion)
         {
             List<EventRecord> records;
             if (!_current.TryGetValue(aggregateId, out records))

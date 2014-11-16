@@ -8,7 +8,7 @@ namespace Core.CQRS
 {
     public interface IEventStore
     {
-        void Save(Guid aggregateId, IEnumerable<Event> events, int expectedVersion);
+        void SaveEvents(Guid aggregateId, IEnumerable<Event> events, int expectedVersion);
         IEnumerable<Event> GetEventsForAggregate(Guid aggregateId);
     }
 }

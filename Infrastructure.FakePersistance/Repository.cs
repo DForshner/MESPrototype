@@ -9,7 +9,7 @@ namespace Infrastructure.FakePersistance
 {
     public class Repository<T> : IRepository<T> where T : AggregateRoot
     {
-        public void Save(AggregateRoot aggregate, int expectedVersion)
+        public void Save(T aggregate, int expectedVersion)
         {
             throw new NotImplementedException();
         }

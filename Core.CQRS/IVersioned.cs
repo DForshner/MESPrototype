@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Web.Visitor
+namespace Core.CQRS
 {
-    //public class RequestLogFilter : ActionFilterAttribute
-    //{
-    //}
+    public interface IVersioned
+    {
+        int Version { get; }
+    }
 }
