@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.ReadModels", "War
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.FakePersistance", "Infrastructure.FakePersistance\Infrastructure.FakePersistance.csproj", "{068AB24A-8402-4A61-8B2E-BF4854C680D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.FakeBusClient", "Infrastructure.FakeBusClient\Infrastructure.FakeBusClient.csproj", "{15C00974-EEA1-4B4C-8CD9-C5289B688402}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -122,6 +124,10 @@ Global
 		{068AB24A-8402-4A61-8B2E-BF4854C680D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{068AB24A-8402-4A61-8B2E-BF4854C680D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{068AB24A-8402-4A61-8B2E-BF4854C680D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15C00974-EEA1-4B4C-8CD9-C5289B688402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15C00974-EEA1-4B4C-8CD9-C5289B688402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15C00974-EEA1-4B4C-8CD9-C5289B688402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15C00974-EEA1-4B4C-8CD9-C5289B688402}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

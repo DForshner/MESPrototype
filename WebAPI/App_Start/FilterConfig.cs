@@ -1,4 +1,4 @@
-﻿using Core.Web.Concurrency;
+﻿using Infrastructure.Web.Concurrency;
 using System.Web;
 using System.Web.Mvc;
 
@@ -10,6 +10,7 @@ namespace WebAPI
         {
             filters.Add(new HandleErrorAttribute());
             filters.Add(new ConcurrencyAwareFilterAttribute());
+            filters.Add(new UpdateVersionMustMatchETagFilterAttribute());
             filters.Add(new ConcurrencyExceptionFilterAttribute());
         }
     }

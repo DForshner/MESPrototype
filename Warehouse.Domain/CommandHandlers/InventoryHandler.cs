@@ -18,27 +18,30 @@ namespace Warehouse.Domain.CommandHandlers
 
         public void Handle(CreateInventoryItem message)
         {
-            var item = new InventoryItem(message.InventoryItemId, message.Name);
+            // TODO: Instead of new-ing inventory item here we should get a call an 
+            // existing aggregate and have it crate the inventory item for us.
+            // See Udi post on don't create aggregate roots.
+            var item = new InventoryItem(message.Id, message.Name);
             _repository.Save(item, null);
         }
 
         public void Handle(DeactivateInventoryItem message)
         {
-            var item = _repository.GetById(message.InventoryItemId);
+            var item = _repository.GetById(message.Id);
             item.Deactivate();
-            _repository.Save(item, message.OriginalVersion);
+            _repository.Save(item, message.Version);
         }
 
         public void Handle(RemoveItemsFromInventory message)
         {
-            var item = _repository.GetById(message.InventoryItemId);
+            var item = _repository.GetById(message.Id);
             item.Remove(message.Count);
             _repository.Save(item, null);
         }
 
         public void Handle(CheckInItemsToInventory message)
         {
-            var item = _repository.GetById(message.InventoryItemId);
+            var item = _repository.GetById(message.Id);
             item.CheckIn(message.Count);
             _repository.Save(item, null);
         }
@@ -47,7 +50,7 @@ namespace Warehouse.Domain.CommandHandlers
         {
             var item = _repository.GetById(message.InventoryItemId);
             item.ChangeName(message.NewName);
-            _repository.Save(item, message.OriginalVersion);
+            _repository.Save(item, message.Version);
         }
 
         public void Handle(CreateInventory cmd)

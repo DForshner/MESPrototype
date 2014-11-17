@@ -20,6 +20,11 @@ namespace Warehouse.Messages.Commands
         public Guid? Id { get; set; }
         public string Name { get; set; }
 
+        public CreateInventoryItem(string name)
+        {
+            Name = name;
+        }
+
         public CreateInventoryItem(Guid id, string name)
         {
             Id = id;

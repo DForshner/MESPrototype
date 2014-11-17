@@ -1,7 +1,5 @@
 ﻿using Core.CQRS;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -50,10 +48,7 @@ namespace WebAPI.Controllers
 
         public HttpResponseMessage Post(Guid id, CheckInItemsToInventory checkInItemsToInventory)
         {
-            _bus.Send(new CheckInItemsToInventory(id,
-                                                  checkInItemsToInventory.Count
-                          ));
-
+            _bus.Send(new CheckInItemsToInventory(id, checkInItemsToInventory.Count));
             return Request.CreateResponse(HttpStatusCode.Accepted);
         }
 

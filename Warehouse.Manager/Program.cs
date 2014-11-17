@@ -21,6 +21,8 @@ namespace Warehouse.Manager
         private const string SERVER_NAME = "localhost";
 
         private static IBus _bus;
+        internal static IEventStore storage = new FakeEventStore(_bus);
+        internal static IRepository<InventoryItem> rep = new Repository<InventoryItem>(storage);
 
         static void Main(string[] args)
         {
@@ -51,6 +53,11 @@ namespace Warehouse.Manager
 
             var inventoryHandler = new InventoryCommandHandler();
             _bus.RegisterCommandHandler<CreateInventory>(inventoryHandler.Handle);
+            _bus.RegisterCommandHandler<CheckInItemsToInventory>(inventoryHandler.Handle);
+            _bus.RegisterCommandHandler<CreateInventoryItem>(inventoryHandler.Handle);
+            _bus.RegisterCommandHandler<DeactivateInventoryItem>(inventoryHandler.Handle);
+            _bus.RegisterCommandHandler<RemoveItemsFromInventory>(inventoryHandler.Handle);
+            _bus.RegisterCommandHandler<RenameInventoryItem>(inventoryHandler.Handle);
         }
 
         public class LocationCommandHandlerLogger :

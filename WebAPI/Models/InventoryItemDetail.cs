@@ -1,5 +1,4 @@
-﻿using Core.Web.Concurrency;
-using Infrastructure.Web.Concurrency;
+﻿using Infrastructure.Web.Concurrency;
 using System;
 using System.Collections.Generic;
 using System.Linq;

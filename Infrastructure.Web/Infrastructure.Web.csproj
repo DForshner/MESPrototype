@@ -40,7 +40,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
-	<Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
@@ -50,9 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concurrency\ETagEncryption.cs" />
+    <Compile Include="Concurrency\UpdateVersionMustMatchETagFilterAttribute.cs" />
     <Compile Include="Concurrency\ConcurrencyAwareFilterAttribute.cs" />
     <Compile Include="Concurrency\ConcurrencyExceptionFilterAttribute.cs" />
-    <Compile Include="Concurrency\EtagToVersionParameterFilterAttribute.cs" />
     <Compile Include="Concurrency\IConcurrencyAware.cs" />
     <Compile Include="RequestLog\RequestLogFilter.cs" />
     <Compile Include="RequestLog\RequestLog.cs" />

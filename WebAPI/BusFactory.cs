@@ -1,8 +1,5 @@
 ﻿using Core.CQRS;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace WebAPI 
 {
@@ -14,5 +11,11 @@ namespace WebAPI
         private static IBus _bus;
 
         public static IBus Instance { get { return _bus; } }
+
+        public static void Setup(IBus bus)
+        { 
+            if (_bus != null) { throw new Exception("Factory has already been configured."); }
+            _bus = bus; 
+        }
     }
 }

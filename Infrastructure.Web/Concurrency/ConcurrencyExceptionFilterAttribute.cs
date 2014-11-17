@@ -1,13 +1,9 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿﻿using Core.CQRS.Exceptions;
 using System.Net;
-using System.Web;
-using System.Web.Http.Filters;
 using System.Net.Http;
-using Core.CQRS.Exceptions;
+using System.Web.Http.Filters;
 
-namespace Core.Web.Concurrency
+namespace Infrastructure.Web.Concurrency
 {
     public class ConcurrencyExceptionFilterAttribute : ExceptionFilterAttribute
     {

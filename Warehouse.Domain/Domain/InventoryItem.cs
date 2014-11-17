@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Warehouse.Messages.Events;
 
 namespace Domain.Warehouse.Domain
 {
-    public class InventoryItem : AggregateRoot
+    public class InventoryItem : EventAggregateRoot
     {
         private bool _activated;
         private Guid _id;
