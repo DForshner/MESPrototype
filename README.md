@@ -3,6 +3,9 @@ MESPrototype
 
 A demo MES I'm using to explore using DDD, CQRS, Event Sourcing, and Functional Reactive Programming concepts.
 
+TODO:
+- [ ] Everything!  Nothing here is working.
+
 WebPortal Solution
 - Web portal to view and control system
 
